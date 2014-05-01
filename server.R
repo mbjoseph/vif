@@ -3,7 +3,7 @@ library(shiny)
 library(car)
 library(mvtnorm)
 library(gridExtra)
-
+library(ggplot2)
 
 shinyServer(function(input, output){
   output$plot <- renderPlot({
