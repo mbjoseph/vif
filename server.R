@@ -2,7 +2,6 @@
 library(shiny)
 library(car)
 library(mvtnorm)
-library(effects)
 library(gridExtra)
 
 
