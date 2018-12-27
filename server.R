@@ -20,8 +20,10 @@ shinyServer(function(input, output){
                     nrow=2)
     
     X <- array(1, dim=c(input$n, 3))
+    set.seed(1234)
     X[, c(2, 3)] <- rmvnorm(n=input$n, sigma=sigma, method="chol")
     mu <- X %*% beta
+    
     epsilon <- rnorm(input$n, 0, sqrt(var_error))
     y <- mu + epsilon
     
